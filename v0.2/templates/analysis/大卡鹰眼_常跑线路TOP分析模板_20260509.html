@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>常跑线路TOP分析模板_20260509</title>
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+</head>
+<body>
+    <div class="nav">
+        <a href="../../index.html">← 首页</a>
+        <span class="nav-title">分析模板 - 常跑线路TOP分析模板_20260509</span>
+    </div>
+    <div class="container">
+        <div class="content">
+            <h1>常跑线路TOP分析</h1>
+
+<h2>条件</h2>
+
+<h3>条件1：月份范围</h3>
+<li>**格式**：YYYY年MM月～YYYY年MM月</li>
+<li>**数据范围**：2025年12月～2026年3月</li>
+<li>**示例**：`2025年12月～2026年3月`</li>
+
+<h3>条件2：区域</h3>
+<li>**格式**：省份，可多选，必须选择至少一个</li>
+<li>**数据范围**：全国34个省级行政区</li>
+<li>**示例**：`山西省`、`河北省`</li>
+<li>**模糊匹配规则**：输入"山西"→匹配"山西省"</li>
+
+<h3>条件3：线路类型</h3>
+<li>**格式**：以下枚举，可多选，默认"全部"</li>
+<li>**数据范围**：全部 / 跨省线路 / 省内跨市线路 / 同城线路</li>
+<li>**示例**：`全部`</li>
+
+<p>---</p>
+
+<h2>展示数据</h2>
+
+<p>> 跨省线路需选择至少两个省份，跨省线路/省内跨市线路/同城线路需根据线路类型是否选择而选择展现。</p>
+
+<p>> 示例条件：您选择了 <strong>山西省+河北省</strong> <strong>2025年12月～2026年3月</strong> 的 <strong>全部线路</strong> 数据，按 <strong>常跑线路TOP</strong> 维度分析。统计基于车辆GPS轨迹聚类算法识别。</p>
+
+<h3>表1：常跑线路TOP20 — 跨省线路 — Table</h3>
+
+<tr><td>排名</td><td>线路(起点→终点)</td><td>车辆数</td><td>占比</td><td>平均里程(km)</td><td>平均频次(次/月)</td></tr>
+<p>|------|---------------|--------|------|------------|---------------|</p>
+<tr><td>1</td><td>太原市→石家庄市</td><td>3,420</td><td>8.2%</td><td>185</td><td>4.2</td></tr>
+<tr><td>2</td><td>大同市→北京市</td><td>2,890</td><td>6.9%</td><td>320</td><td>3.8</td></tr>
+<tr><td>3</td><td>长治市→郑州市</td><td>2,340</td><td>5.6%</td><td>210</td><td>3.5</td></tr>
+<tr><td>4</td><td>运城市→西安市</td><td>2,120</td><td>5.1%</td><td>245</td><td>3.2</td></tr>
+<tr><td>5</td><td>太原市→北京市</td><td>1,120</td><td>2.7%</td><td>485</td><td>2.1</td></tr>
+<tr><td>6</td><td>大同市→呼和浩特市</td><td>980</td><td>2.3%</td><td>220</td><td>2.8</td></tr>
+<tr><td>7</td><td>太原市→天津市</td><td>780</td><td>1.9%</td><td>520</td><td>1.8</td></tr>
+<tr><td>8</td><td>临汾市→西安市</td><td>680</td><td>1.6%</td><td>280</td><td>2.5</td></tr>
+<tr><td>9</td><td>吕梁市→西安市</td><td>620</td><td>1.5%</td><td>310</td><td>2.3</td></tr>
+<tr><td>10</td><td>太原市→郑州市</td><td>580</td><td>1.4%</td><td>420</td><td>2.0</td></tr>
+<tr><td>11</td><td>晋中市→石家庄市</td><td>520</td><td>1.2%</td><td>175</td><td>3.1</td></tr>
+<tr><td>12</td><td>阳泉市→石家庄市</td><td>480</td><td>1.1%</td><td>140</td><td>3.6</td></tr>
+<tr><td>13</td><td>朔州市→呼和浩特市</td><td>420</td><td>1.0%</td><td>195</td><td>2.6</td></tr>
+<tr><td>14</td><td>忻州市→北京市</td><td>380</td><td>0.9%</td><td>445</td><td>2.0</td></tr>
+<tr><td>15</td><td>晋城市→郑州市</td><td>350</td><td>0.8%</td><td>95</td><td>3.9</td></tr>
+<tr><td>16</td><td>临汾市→郑州市</td><td>320</td><td>0.8%</td><td>350</td><td>2.4</td></tr>
+<tr><td>17</td><td>运城市→西安市</td><td>290</td><td>0.7%</td><td>245</td><td>3.2</td></tr>
+<tr><td>18</td><td>长治市→石家庄市</td><td>260</td><td>0.6%</td><td>205</td><td>3.0</td></tr>
+<tr><td>19</td><td>太原市→呼和浩特市</td><td>240</td><td>0.6%</td><td>380</td><td>1.9</td></tr>
+<tr><td>20</td><td>大同市→天津市</td><td>220</td><td>0.5%</td><td>480</td><td>1.7</td></tr>
+
+<p>> 数据口径：2026年3月山西省与河北省之间跨省常跑线路TOP20，按该线路上的车辆数降序排列，占比 = 该线路车辆数 / 总跨省活跃车辆数 × 100%。</p>
+
+<p>---</p>
+
+<h3>表2：常跑线路TOP20 — 省内跨市线路 — Table</h3>
+
+<tr><td>排名</td><td>线路(起点→终点)</td><td>车辆数</td><td>占比</td><td>平均里程(km)</td><td>平均频次(次/月)</td></tr>
+<p>|------|---------------|--------|------|------------|---------------|</p>
+<tr><td>1</td><td>晋中市→太原市</td><td>2,560</td><td>6.1%</td><td>45</td><td>6.5</td></tr>
+<tr><td>2</td><td>临汾市→太原市</td><td>1,890</td><td>4.5%</td><td>155</td><td>4.0</td></tr>
+<tr><td>3</td><td>吕梁市→太原市</td><td>1,780</td><td>4.3%</td><td>120</td><td>4.8</td></tr>
+<tr><td>4</td><td>朔州市→大同市</td><td>1,340</td><td>3.2%</td><td>95</td><td>5.2</td></tr>
+<tr><td>5</td><td>忻州市→太原市</td><td>1,280</td><td>3.1%</td><td>135</td><td>4.1</td></tr>
+<tr><td>6</td><td>运城市→太原市</td><td>920</td><td>2.2%</td><td>195</td><td>3.4</td></tr>
+<tr><td>7</td><td>长治市→太原市</td><td>890</td><td>2.1%</td><td>175</td><td>3.7</td></tr>
+<tr><td>8</td><td>晋城市→太原市</td><td>720</td><td>1.7%</td><td>125</td><td>4.5</td></tr>
+<tr><td>9</td><td>阳泉市→太原市</td><td>680</td><td>1.6%</td><td>110</td><td>4.8</td></tr>
+<tr><td>10</td><td>大同市→太原市</td><td>620</td><td>1.5%</td><td>285</td><td>3.2</td></tr>
+<tr><td>11</td><td>晋中市→临汾市</td><td>580</td><td>1.4%</td><td>85</td><td>5.2</td></tr>
+<tr><td>12</td><td>吕梁市→临汾市</td><td>520</td><td>1.2%</td><td>95</td><td>4.8</td></tr>
+<tr><td>13</td><td>运城市→临汾市</td><td>480</td><td>1.1%</td><td>75</td><td>5.5</td></tr>
+<tr><td>14</td><td>长治市→晋中市</td><td>450</td><td>1.1%</td><td>65</td><td>5.8</td></tr>
+<tr><td>15</td><td>忻州市→大同市</td><td>420</td><td>1.0%</td><td>155</td><td>3.8</td></tr>
+<tr><td>16</td><td>朔州市→太原市</td><td>380</td><td>0.9%</td><td>215</td><td>3.0</td></tr>
+<tr><td>17</td><td>晋城市→长治市</td><td>350</td><td>0.8%</td><td>55</td><td>6.2</td></tr>
+<tr><td>18</td><td>阳泉市→晋中市</td><td>320</td><td>0.8%</td><td>45</td><td>6.8</td></tr>
+<tr><td>19</td><td>临汾市→吕梁市</td><td>290</td><td>0.7%</td><td>85</td><td>5.0</td></tr>
+<tr><td>20</td><td>大同市→朔州市</td><td>260</td><td>0.6%</td><td>125</td><td>4.2</td></tr>
+
+<p>> 数据口径：2026年3月山西省内跨市常跑线路TOP20，按该线路上的车辆数降序排列，占比 = 该线路车辆数 / 总省内跨市活跃车辆数 × 100%。</p>
+
+<p>---</p>
+
+<h3>表3：常跑线路TOP20 — 同城线路 — Table</h3>
+
+<tr><td>排名</td><td>线路(起点→终点)</td><td>车辆数</td><td>占比</td><td>平均里程(km)</td><td>平均频次(次/月)</td></tr>
+<p>|------|---------------|--------|------|------------|---------------|</p>
+<tr><td>1</td><td>太原市→太原市</td><td>4,520</td><td>10.9%</td><td>35</td><td>8.5</td></tr>
+<tr><td>2</td><td>大同市→大同市</td><td>2,890</td><td>6.9%</td><td>28</td><td>7.2</td></tr>
+<tr><td>3</td><td>晋中市→晋中市</td><td>2,340</td><td>5.6%</td><td>32</td><td>7.8</td></tr>
+<tr><td>4</td><td>长治市→长治市</td><td>1,890</td><td>4.5%</td><td>30</td><td>8.0</td></tr>
+<tr><td>5</td><td>运城市→运城市</td><td>1,780</td><td>4.3%</td><td>38</td><td>6.8</td></tr>
+<tr><td>6</td><td>临汾市→临汾市</td><td>1,560</td><td>3.7%</td><td>25</td><td>8.2</td></tr>
+<tr><td>7</td><td>吕梁市→吕梁市</td><td>1,340</td><td>3.2%</td><td>22</td><td>8.5</td></tr>
+<tr><td>8</td><td>阳泉市→阳泉市</td><td>980</td><td>2.3%</td><td>20</td><td>9.0</td></tr>
+<tr><td>9</td><td>朔州市→朔州市</td><td>890</td><td>2.1%</td><td>26</td><td>7.5</td></tr>
+<tr><td>10</td><td>忻州市→忻州市</td><td>780</td><td>1.9%</td><td>24</td><td>7.8</td></tr>
+<tr><td>11</td><td>晋城市→晋城市</td><td>720</td><td>1.7%</td><td>28</td><td>7.0</td></tr>
+<tr><td>12</td><td>石家庄市→石家庄市</td><td>2,120</td><td>5.1%</td><td>42</td><td>6.5</td></tr>
+<tr><td>13</td><td>唐山市→唐山市</td><td>1,560</td><td>3.7%</td><td>35</td><td>7.0</td></tr>
+<tr><td>14</td><td>保定市→保定市</td><td>1,340</td><td>3.2%</td><td>38</td><td>6.8</td></tr>
+<tr><td>15</td><td>邯郸市→邯郸市</td><td>1,120</td><td>2.7%</td><td>30</td><td>7.5</td></tr>
+<tr><td>16</td><td>廊坊市→廊坊市</td><td>890</td><td>2.1%</td><td>45</td><td>6.0</td></tr>
+<tr><td>17</td><td>沧州市→沧州市</td><td>780</td><td>1.9%</td><td>32</td><td>7.2</td></tr>
+<tr><td>18</td><td>邢台市→邢台市</td><td>680</td><td>1.6%</td><td>28</td><td>7.8</td></tr>
+<tr><td>19</td><td>秦皇岛市→秦皇岛市</td><td>520</td><td>1.2%</td><td>48</td><td>5.5</td></tr>
+<tr><td>20</td><td>张家口市→张家口市</td><td>480</td><td>1.1%</td><td>55</td><td>5.0</td></tr>
+
+<p>> 数据口径：2026年3月山西省+河北省同城常跑线路TOP20，按该线路上的车辆数降序排列，占比 = 该线路车辆数 / 总同城活跃车辆数 × 100%。</p>
+
+<p>---</p>
+
+<h3>表4：线路类型结构占比 — 饼图</h3>
+
+<tr><td>线路类型</td><td>车辆数</td><td>占比</td></tr>
+<p>|---------|--------|------|</p>
+<tr><td>跨省线路</td><td>18,240</td><td>30.2%</td></tr>
+<tr><td>省内跨市线路</td><td>15,680</td><td>26.0%</td></tr>
+<tr><td>同城线路</td><td>26,420</td><td>43.8%</td></tr>
+<tr><td>**合计**</td><td>**60,340**</td><td>**100.0%**</td></tr>
+
+<p>> 数据口径：2026年3月山西省+河北省活跃车辆按常跑线路类型统计，占比 = 该类型线路车辆数 / 总活跃车辆数 × 100%。</p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>大卡鹰眼项目文档 | 最后更新：<span class="update-time"></span></p>
+    </div>
+    <script src="../../../assets/js/nav.js"></script>
+</body>
+</html>

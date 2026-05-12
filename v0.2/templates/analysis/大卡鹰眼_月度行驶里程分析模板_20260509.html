@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>月度行驶里程分析模板_20260509</title>
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+</head>
+<body>
+    <div class="nav">
+        <a href="../../index.html">← 首页</a>
+        <span class="nav-title">分析模板 - 月度行驶里程分析模板_20260509</span>
+    </div>
+    <div class="container">
+        <div class="content">
+            <h1>月度行驶里程分析</h1>
+
+<h2>条件</h2>
+
+<h3>条件1：统计月份</h3>
+<li>**格式**：YYYY年MM月</li>
+<li>**数据范围**：2025年12月～2026年3月</li>
+<li>**示例**：`2026年3月`</li>
+
+<h3>条件2：车辆注册地</h3>
+<li>**格式**：地级市，单选，必须选择</li>
+<li>**数据范围**：全国地级市</li>
+<li>**示例**：`太原市`、`成都市`</li>
+<li>**模糊匹配规则**：输入"太原"→匹配"太原市"；输入"成都"→匹配"成都市"</li>
+
+<p>---</p>
+
+<h2>展示数据</h2>
+
+<p>> 示例条件：您选择了 <strong>太原市</strong> <strong>2026年3月</strong> 的 <strong>载货汽车+牵引车</strong> 数据，按 <strong>月度行驶里程</strong> 维度分析。统计基于车辆GPS轨迹日汇总数据。</p>
+
+<h3>表1：月度平均行驶里程变化 — Table</h3>
+
+<tr><td>月份</td><td>平均里程(km)</td><td>环比</td><td>活跃车辆数</td><td>总里程(万km)</td></tr>
+<p>|------|------------|------|-----------|-------------|</p>
+<tr><td>2025-12</td><td>3,450</td><td>—</td><td>42,100</td><td>14,524.5</td></tr>
+<tr><td>2026-01</td><td>3,280</td><td>-4.9%</td><td>41,800</td><td>13,710.4</td></tr>
+<tr><td>2026-02</td><td>2,890</td><td>-11.9%</td><td>38,500</td><td>11,126.5</td></tr>
+<tr><td>2026-03</td><td>3,680</td><td>+27.3%</td><td>44,200</td><td>16,265.6</td></tr>
+
+<p>> 数据口径：统计周期内，按月统计活跃车辆（当月有行驶轨迹且里程≥2km）的平均行驶里程，环比 = (本月-上月)/上月 × 100%。</p>
+
+<p>---</p>
+
+<h3>表2：各类型车辆里程对比 — Table</h3>
+
+<tr><td>车辆类型</td><td>平均里程(km)</td><td>中位数(km)</td><td>最大里程(km)</td><td>活跃车辆数</td></tr>
+<p>|---------|------------|-----------|------------|-----------|</p>
+<tr><td>载货汽车</td><td>3,420</td><td>2,800</td><td>12,500</td><td>28,560</td></tr>
+<tr><td>牵引车</td><td>4,850</td><td>4,200</td><td>18,600</td><td>9,340</td></tr>
+<tr><td>挂车</td><td>3,680</td><td>3,100</td><td>14,200</td><td>6,230</td></tr>
+<tr><td>自卸汽车</td><td>2,450</td><td>1,900</td><td>8,300</td><td>4,560</td></tr>
+<tr><td>厢式货车</td><td>3,890</td><td>3,400</td><td>11,800</td><td>2,890</td></tr>
+<tr><td>仓栅式货车</td><td>3,560</td><td>3,000</td><td>10,500</td><td>2,340</td></tr>
+<tr><td>罐式货车</td><td>4,120</td><td>3,600</td><td>13,400</td><td>780</td></tr>
+<tr><td>平板货车</td><td>3,240</td><td>2,700</td><td>9,800</td><td>520</td></tr>
+<tr><td>集装箱运输车</td><td>5,680</td><td>5,200</td><td>16,200</td><td>98</td></tr>
+<tr><td>其他专用货车</td><td>3,780</td><td>3,200</td><td>11,000</td><td>140</td></tr>
+
+<p>> 数据口径：2026年3月太原市各类型活跃车辆的行驶里程统计，平均里程 = 该类型总里程 / 该类型活跃车辆数。</p>
+
+<p>---</p>
+
+<h3>表3：月度运营天数分布 — Table</h3>
+
+<tr><td>运营天数</td><td>车辆数</td><td>占比</td><td>累计占比</td></tr>
+<p>|---------|--------|------|---------|</p>
+<tr><td>1-5天</td><td>4,420</td><td>10.0%</td><td>10.0%</td></tr>
+<tr><td>6-10天</td><td>6,630</td><td>15.0%</td><td>25.0%</td></tr>
+<tr><td>11-15天</td><td>8,840</td><td>20.0%</td><td>45.0%</td></tr>
+<tr><td>16-20天</td><td>8,840</td><td>20.0%</td><td>65.0%</td></tr>
+<tr><td>21-25天</td><td>7,952</td><td>18.0%</td><td>83.0%</td></tr>
+<tr><td>26-31天</td><td>7,518</td><td>17.0%</td><td>100.0%</td></tr>
+<tr><td>**合计**</td><td>**44,200**</td><td>**100.0%**</td><td>—</td></tr>
+
+<p>> 数据口径：2026年3月太原市活跃车辆按当月运营天数（有行驶轨迹的天数）分段统计，占比 = 该分段车辆数 / 总活跃车辆数 × 100%。</p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>大卡鹰眼项目文档 | 最后更新：<span class="update-time"></span></p>
+    </div>
+    <script src="../../../assets/js/nav.js"></script>
+</body>
+</html>

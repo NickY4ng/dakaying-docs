@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旧SQL表对比检查结果_20260428</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+    <div class="nav">
+        <a href="../../index.html">← 首页</a>
+        <span class="nav-title">分析报告 - 旧SQL表对比检查结果_20260428</span>
+    </div>
+    <div class="container">
+        <div class="content">
+            <h1>旧维度SQL表对比检查结果</h1>
+
+<h2>发现的差异</h2>
+
+<h3>1. 距离区间不一致 ⚠️</h3>
+<li>**旧维度6**：0-100km / 100-500km / 500-1000km / 1000km+</li>
+<li>**旧维度13**：0-50km(同城/短途) / 50-200km(城际/中短途) / 200-500km(中长途) / 500km+(长途干线)</li>
+<li>**我的D07**：0-50km / 50-200km / 200-500km / 500km+（宜宾项目确认的4档）</li>
+<li>需要用哪个？宜宾是5档含1000km+，旧SQL是4档但区间不同。</li>
+
+<h3>2. toFloat64OrNull 更安全 ⚠️</h3>
+<li>旧维度8用了 `avg(toFloat64OrNull(limit_load))`</li>
+<li>我用了 `avg(CAST(limit_load AS Float64)/1000)`</li>
+<li>`toFloat64OrNull` 遇到NULL不报错直接返回NULL，更安全</li>
+
+<h3>3. ClickHouse有更简洁的字符串拼接</h3>
+<li>旧维度17：`vehicle_type_marking || '-' || goods_type_name` (用 `||`)</li>
+<li>我的：`concat(vehicle_type_marking, ' - ', goods_type_name)`</li>
+<li>两种都行，`||`更简洁</li>
+
+<h3>4. 旧维度8用了 `vehicle_type` 而非 `vehicle_type_marking`</h3>
+<li>表结构里两个字段都在，我用的是 `vehicle_type_marking`（业务车型）</li>
+<li>如果两个含义不同，我需要确认用哪个</li>
+
+<h3>5. 旧SQL百分比计算</h3>
+<li>旧维度5用了子查询 `(SELECT count(*) FROM ...)` 算占比</li>
+<li>我用了窗口函数 `sum(count(*)) OVER ()`</li>
+<li>窗口函数更高效 ✅</li>
+
+<h3>6. 区间带文字说明</h3>
+<li>旧维度13区间带了注释：`0-50km (同城/短途)`，给人看更友好</li>
+<li>我可以加上</li>
+
+<h2>建议修改项</h2>
+<li>统一距离区间标准（需要航哥确认用哪套）</li>
+<li>将 `CAST(limit_load AS Float64)` 改为 `toFloat64OrNull(limit_load)`</li>
+
+        </div>
+    </div>
+    <div class="footer">
+        <p>大卡鹰眼项目文档 | 最后更新：<span class="update-time"></span></p>
+    </div>
+    <script src="../../assets/js/nav.js"></script>
+</body>
+</html>

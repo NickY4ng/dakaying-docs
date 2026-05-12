@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>车辆品牌分布分析模板_20260509</title>
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+</head>
+<body>
+    <div class="nav">
+        <a href="../../index.html">← 首页</a>
+        <span class="nav-title">分析模板 - 车辆品牌分布分析模板_20260509</span>
+    </div>
+    <div class="container">
+        <div class="content">
+            <h1>车辆品牌分布分析</h1>
+
+<h2>条件</h2>
+
+<h3>条件1：统计月份</h3>
+<li>**格式**：YYYY年MM月</li>
+<li>**数据范围**：2025年12月～2026年3月</li>
+<li>**示例**：`2026年3月`</li>
+
+<h3>条件2：区域</h3>
+<li>**格式**：地级市，单选，必须选择</li>
+<li>**数据范围**：全国地级市</li>
+<li>**示例**：`太原市`、`成都市`</li>
+<li>**模糊匹配规则**：输入"太原"→匹配"太原市"；输入"成都"→匹配"成都市"</li>
+
+<p>---</p>
+
+<h2>展示数据</h2>
+
+<p>> 示例条件：您选择了 <strong>太原市</strong> <strong>2026年3月</strong> 数据，按 <strong>车辆品牌分布</strong> 维度分析。统计基于车辆注册信息。</p>
+
+<h3>表1：车辆品牌数量分布 — Table</h3>
+
+<tr><td>排名</td><td>品牌</td><td>车辆数</td><td>占比</td><td>环比</td></tr>
+<p>|------|------|--------|------|------|</p>
+<tr><td>1</td><td>东风</td><td>18,560</td><td>21.8%</td><td>+5.2%</td></tr>
+<tr><td>2</td><td>解放</td><td>15,230</td><td>17.9%</td><td>+4.8%</td></tr>
+<tr><td>3</td><td>重汽</td><td>12,890</td><td>15.1%</td><td>+6.5%</td></tr>
+<tr><td>4</td><td>陕汽</td><td>9,780</td><td>11.5%</td><td>+3.2%</td></tr>
+<tr><td>5</td><td>福田</td><td>8,560</td><td>10.0%</td><td>+7.1%</td></tr>
+<tr><td>6</td><td>江淮</td><td>6,420</td><td>7.5%</td><td>+2.8%</td></tr>
+<tr><td>7</td><td>红岩</td><td>4,560</td><td>5.4%</td><td>+1.9%</td></tr>
+<tr><td>8</td><td>大运</td><td>3,890</td><td>4.6%</td><td>+8.5%</td></tr>
+<tr><td>9</td><td>华菱</td><td>2,340</td><td>2.7%</td><td>-1.2%</td></tr>
+<tr><td>10</td><td>北奔</td><td>1,890</td><td>2.2%</td><td>+0.5%</td></tr>
+<tr><td>11</td><td>徐工</td><td>1,560</td><td>1.8%</td><td>+3.6%</td></tr>
+<tr><td>12</td><td>三一</td><td>1,230</td><td>1.4%</td><td>+5.2%</td></tr>
+<tr><td>13</td><td>其他品牌</td><td>2,890</td><td>3.4%</td><td>+2.1%</td></tr>
+<tr><td>**合计**</td><td>**85,200**</td><td>**100.0%**</td><td>—</td></tr>
+
+<p>> 数据口径：2026年3月末太原市在网车辆按品牌分类统计，占比 = 该品牌车辆数 / 总在网车辆数 × 100%，环比 = (本月-上月)/上月 × 100%。</p>
+
+<p>---</p>
+
+<h3>表2：车辆品牌结构占比 — 饼图</h3>
+
+<tr><td>品牌</td><td>数量</td><td>占比</td></tr>
+<p>|------|------|------|</p>
+<tr><td>东风</td><td>18,560</td><td>21.8%</td></tr>
+<tr><td>解放</td><td>15,230</td><td>17.9%</td></tr>
+<tr><td>重汽</td><td>12,890</td><td>15.1%</td></tr>
+<tr><td>陕汽</td><td>9,780</td><td>11.5%</td></tr>
+<tr><td>福田</td><td>8,560</td><td>10.0%</td></tr>
+<tr><td>江淮</td><td>6,420</td><td>7.5%</td></tr>
+<tr><td>红岩</td><td>4,560</td><td>5.4%</td></tr>
+<tr><td>大运</td><td>3,890</td><td>4.6%</td></tr>
+<tr><td>其他品牌</td><td>5,310</td><td>6.2%</td></tr>
+<tr><td>**合计**</td><td>**85,200**</td><td>**100.0%**</td></tr>
+
+<p>> 数据口径：2026年3月末太原市在网车辆按品牌分类统计，占比 = 该品牌车辆数 / 总在网车辆数 × 100%。</p>
+
+<p>---</p>
+
+<h3>表3：TOP10品牌车辆类型分布 — Table</h3>
+
+<tr><td>品牌</td><td>载货汽车</td><td>牵引车</td><td>挂车</td><td>自卸汽车</td><td>其他类型</td><td>合计</td></tr>
+<p>|------|---------|--------|------|---------|---------|------|</p>
+<tr><td>东风</td><td>10,560</td><td>4,230</td><td>2,120</td><td>1,450</td><td>200</td><td>18,560</td></tr>
+<tr><td>解放</td><td>8,560</td><td>3,890</td><td>1,780</td><td>890</td><td>110</td><td>15,230</td></tr>
+<tr><td>重汽</td><td>7,230</td><td>3,120</td><td>1,560</td><td>890</td><td>90</td><td>12,890</td></tr>
+<tr><td>陕汽</td><td>5,890</td><td>2,340</td><td>890</td><td>560</td><td>100</td><td>9,780</td></tr>
+<tr><td>福田</td><td>5,230</td><td>1,890</td><td>890</td><td>450</td><td>100</td><td>8,560</td></tr>
+<tr><td>江淮</td><td>4,120</td><td>1,230</td><td>560</td><td>450</td><td>60</td><td>6,420</td></tr>
+<tr><td>红岩</td><td>2,890</td><td>890</td><td>340</td><td>340</td><td>100</td><td>4,560</td></tr>
+<tr><td>大运</td><td>2,340</td><td>780</td><td>450</td><td>280</td><td>40</td><td>3,890</td></tr>
+<tr><td>华菱</td><td>1,560</td><td>450</td><td>230</td><td>90</td><td>10</td><td>2,340</td></tr>
+<tr><td>北奔</td><td>1,230</td><td>340</td><td>180</td><td>120</td><td>20</td><td>1,890</td></tr>
+
+<p>> 数据口径：2026年3月末太原市TOP10品牌车辆按类型交叉统计，格子里为车辆数。</p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>大卡鹰眼项目文档 | 最后更新：<span class="update-time"></span></p>
+    </div>
+    <script src="../../../assets/js/nav.js"></script>
+</body>
+</html>

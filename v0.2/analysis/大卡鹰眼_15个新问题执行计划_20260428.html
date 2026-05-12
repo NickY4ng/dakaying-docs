@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15个新问题执行计划_20260428</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+    <div class="nav">
+        <a href="../../index.html">← 首页</a>
+        <span class="nav-title">分析报告 - 15个新问题执行计划_20260428</span>
+    </div>
+    <div class="container">
+        <div class="content">
+            <h1>15个新问题执行计划</h1>
+
+<h2>设计原则</h2>
+<li>复用现有21个维度，不新增</li>
+<li>每个问题3-5个维度，每个维度1-3个指标</li>
+<li>参数化：{城市}{省份}{货类}占位符</li>
+<li>企业名称先不脱敏</li>
+
+<h2>问题清单</h2>
+
+<h3>第1批：基础流向（3个）</h3>
+<p>Q21 {城市}到省内其他城市的货物流向 — D02A,D02B,D03A,D05A,D07A,D08A</p>
+<p>Q22 {城市}出口运单的货类-省份交叉 — D05A,D03A,D03B,D07A</p>
+<p>Q23 {城市}进口运单的来源省份与货类 — D01A,D01B,D05A,D07A</p>
+
+<h3>第2批：货类专题（5个）</h3>
+<p>Q24 {城市}{货类}运距分布与车型偏好 — D07A,D07B,D06A,D08A,D08B</p>
+<p>Q25 {省份}{货类}不同月份出货波动 — D21A,D21B,D06A,D07A</p>
+<p>Q26 {城市}两到三个货类运输特征对比 — D05A,D05B,D07A,D07B,D13A</p>
+<p>Q27 {货类}全国主要流出省份排名 — D03A,D03B,D03C,D06A</p>
+<p>Q28 {城市}{货类}装/卸效率对比 — D14A,D15A,D16A,D09A</p>
+
+<h3>第3批：运力与车辆（2个）</h3>
+<p>Q29 {城市}满载率最高/最低车型排行 — D10A,D10B,D08A,D08C</p>
+<p>Q30 {城市}不同车型载重利用率 — D08C,D09B,D20A,D06A</p>
+
+<h3>第4批：企业/行业深度（5个）</h3>
+<p>Q31 {城市}TOP10发货企业货类结构与流向 — D11A,D11B,D05A,D02A</p>
+<p>Q32 {城市}各行业用的主要车型差异 — D18A,D20A,D08A,D08B</p>
+<p>Q33 {城市}上游供应商和下游客户空间分布 — D11A,D11B,D12A,D12B,D01A,D02A</p>
+<p>Q34 {城市}发货行业与收货行业匹配 — D18A,D19A,D20A,D03A</p>
+<p>Q35 {城市}{货类}运输时效最好的前10条线路 — D13A,D13B,D14A,D15A,D02A</p>
+
+<h2>执行步骤</h2>
+<li>设计每个问题→维度→指标映射</li>
+<li>复用/微调现有SQL</li>
+<li>生成JSON图表配置</li>
+<p>4. 新增Sheet到Excel</p>
+<p>5. 自检+验证</p>
+
+        </div>
+    </div>
+    <div class="footer">
+        <p>大卡鹰眼项目文档 | 最后更新：<span class="update-time"></span></p>
+    </div>
+    <script src="../../assets/js/nav.js"></script>
+</body>
+</html>

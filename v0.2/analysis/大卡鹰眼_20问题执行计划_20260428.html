@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20问题执行计划_20260428</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+    <div class="nav">
+        <a href="../../index.html">← 首页</a>
+        <span class="nav-title">分析报告 - 20问题执行计划_20260428</span>
+    </div>
+    <div class="container">
+        <div class="content">
+            <h1>执行计划</h1>
+
+<h2>整体思路</h2>
+<p>20个问题分为4批次输出，每批5个。你确认一批我再继续下一批。</p>
+
+<h2>批次安排</h2>
+
+<tr><td>批次</td><td>问题</td><td>类型</td><td>状态</td></tr>
+<p>|------|------|------|------|</p>
+<tr><td>第1批</td><td>Q1-Q5</td><td>通用流向+上游+运力+时效+煤炭</td><td>✅ 马上出</td></tr>
+<tr><td>第2批</td><td>Q6-Q10</td><td>蔬菜流向+钢铁+港口+短途+化工</td><td>⏳</td></tr>
+<tr><td>第3批</td><td>Q11-Q15</td><td>冷链+距离+企业+偏好+时效路径</td><td>⏳</td></tr>
+<tr><td>第4批</td><td>Q16-Q20</td><td>行业+线路+煤炭+蔬菜+蔬菜</td><td>⏳</td></tr>
+
+<h2>每个问题的输出格式</h2>
+
+<tr><td>列</td><td>内容</td></tr>
+<p>|----|------|</p>
+<tr><td>问题编码</td><td>Q1</td></tr>
+<tr><td>问题描述</td><td>原始问题文字</td></tr>
+<tr><td>理解</td><td>这个问题的核心诉求</td></tr>
+<tr><td>维度1</td><td>自创维度名称 + 指标 + 呈现数据 + 图表类型</td></tr>
+<tr><td>维度2</td><td>...</td></tr>
+<tr><td>维度3</td><td>...</td></tr>
+<tr><td>维度4</td><td>...</td></tr>
+<tr><td>...</td><td>...</td></tr>
+<tr><td>字段备注</td><td>哪些字段可能为空</td></tr>
+
+<h2>约束</h2>
+<li>维度自创，不沿用旧维度表</li>
+<li>脱敏先不做</li>
+<li>字段为空要标注</li>
+<li>limit_load（载重，千克）可用</li>
+<li>成本相关不用</li>
+<li>一级货类共17类，不取TOP20</li>
+<li>每个问题3-6个维度，每个维度1-3个指标</li>
+<li>所有指标一维</li>
+
+        </div>
+    </div>
+    <div class="footer">
+        <p>大卡鹰眼项目文档 | 最后更新：<span class="update-time"></span></p>
+    </div>
+    <script src="../../assets/js/nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>车龄分布分析模板_20260509</title>
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+</head>
+<body>
+    <div class="nav">
+        <a href="../../index.html">← 首页</a>
+        <span class="nav-title">分析模板 - 车龄分布分析模板_20260509</span>
+    </div>
+    <div class="container">
+        <div class="content">
+            <h1>车龄分布分析</h1>
+
+<h2>条件</h2>
+
+<h3>条件1：统计月份</h3>
+<li>**格式**：YYYY年MM月</li>
+<li>**数据范围**：2025年12月～2026年3月</li>
+<li>**示例**：`2026年3月`</li>
+
+<h3>条件2：区域</h3>
+<li>**格式**：地级市，单选，必须选择</li>
+<li>**数据范围**：全国地级市</li>
+<li>**示例**：`太原市`、`成都市`</li>
+<li>**模糊匹配规则**：输入"太原"→匹配"太原市"；输入"成都"→匹配"成都市"</li>
+
+<p>---</p>
+
+<h2>展示数据</h2>
+
+<p>> 示例条件：您选择了 <strong>太原市</strong> <strong>2026年3月</strong> 的 <strong>全部类型</strong> 数据，按 <strong>车龄分布</strong> 维度分析。统计基于车辆注册信息。</p>
+
+<h3>表1：车龄区间数量分布 — Table</h3>
+
+<tr><td>车龄区间</td><td>车辆数</td><td>占比</td><td>环比</td></tr>
+<p>|---------|--------|------|------|</p>
+<tr><td>1年以内</td><td>12,560</td><td>14.7%</td><td>+8.5%</td></tr>
+<tr><td>1-3年</td><td>32,890</td><td>38.6%</td><td>+2.1%</td></tr>
+<tr><td>3-5年</td><td>24,560</td><td>28.8%</td><td>-3.2%</td></tr>
+<tr><td>5-8年</td><td>10,230</td><td>12.0%</td><td>-5.8%</td></tr>
+<tr><td>8年以上</td><td>4,960</td><td>5.8%</td><td>-8.5%</td></tr>
+<tr><td>**合计**</td><td>**85,200**</td><td>**100.0%**</td><td>—</td></tr>
+
+<p>> 数据口径：2026年3月末太原市在网车辆按车龄区间分类统计，占比 = 该区间车辆数 / 总在网车辆数 × 100%，环比 = (本月-上月)/上月 × 100%。</p>
+
+<p>---</p>
+
+<h3>表2：车龄区间结构占比 — 饼图</h3>
+
+<tr><td>车龄区间</td><td>数量</td><td>占比</td></tr>
+<p>|---------|------|------|</p>
+<tr><td>1年以内</td><td>12,560</td><td>14.7%</td></tr>
+<tr><td>1-3年</td><td>32,890</td><td>38.6%</td></tr>
+<tr><td>3-5年</td><td>24,560</td><td>28.8%</td></tr>
+<tr><td>5-8年</td><td>10,230</td><td>12.0%</td></tr>
+<tr><td>8年以上</td><td>4,960</td><td>5.8%</td></tr>
+<tr><td>**合计**</td><td>**85,200**</td><td>**100.0%**</td></tr>
+
+<p>> 数据口径：2026年3月末太原市在网车辆按车龄区间分类统计，占比 = 该区间车辆数 / 总在网车辆数 × 100%。</p>
+
+<p>---</p>
+
+<h3>表3：各类型车辆车龄分布 — Table</h3>
+
+<tr><td>车辆类型</td><td>1年以内</td><td>1-3年</td><td>3-5年</td><td>5-8年</td><td>8年以上</td><td>合计</td></tr>
+<p>|---------|--------|--------|--------|--------|---------|------|</p>
+<tr><td>载货汽车</td><td>7,120</td><td>20,340</td><td>12,890</td><td>5,230</td><td>1,980</td><td>47,560</td></tr>
+<tr><td>牵引车</td><td>2,890</td><td>5,230</td><td>3,120</td><td>1,560</td><td>650</td><td>13,450</td></tr>
+<tr><td>挂车</td><td>1,560</td><td>3,890</td><td>2,560</td><td>890</td><td>440</td><td>9,340</td></tr>
+<tr><td>自卸汽车</td><td>890</td><td>2,340</td><td>2,120</td><td>1,120</td><td>310</td><td>6,780</td></tr>
+<tr><td>厢式货车</td><td>450</td><td>1,230</td><td>890</td><td>560</td><td>290</td><td>3,420</td></tr>
+<tr><td>仓栅式货车</td><td>380</td><td>1,120</td><td>780</td><td>420</td><td>190</td><td>2,890</td></tr>
+<tr><td>罐式货车</td><td>120</td><td>340</td><td>280</td><td>110</td><td>40</td><td>890</td></tr>
+<tr><td>平板货车</td><td>80</td><td>210</td><td>160</td><td>80</td><td>30</td><td>560</td></tr>
+<tr><td>集装箱运输车</td><td>25</td><td>45</td><td>30</td><td>15</td><td>5</td><td>120</td></tr>
+<tr><td>其他专用货车</td><td>45</td><td>85</td><td>40</td><td>15</td><td>5</td><td>190</td></tr>
+
+<p>> 数据口径：2026年3月末太原市各类型车辆按车龄区间交叉统计，格子里为车辆数。</p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>大卡鹰眼项目文档 | 最后更新：<span class="update-time"></span></p>
+    </div>
+    <script src="../../../assets/js/nav.js"></script>
+</body>
+</html>

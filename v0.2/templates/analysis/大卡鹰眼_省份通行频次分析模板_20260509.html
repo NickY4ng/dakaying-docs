@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>省份通行频次分析模板_20260509</title>
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+</head>
+<body>
+    <div class="nav">
+        <a href="../../index.html">← 首页</a>
+        <span class="nav-title">分析模板 - 省份通行频次分析模板_20260509</span>
+    </div>
+    <div class="container">
+        <div class="content">
+            <h1>省份通行频次分析</h1>
+
+<h2>条件</h2>
+
+<h3>条件1：月份范围</h3>
+<li>**格式**：YYYY年MM月～YYYY年MM月</li>
+<li>**数据范围**：2025年12月～2026年3月</li>
+<li>**示例**：`2025年12月～2026年3月`</li>
+
+<h3>条件2：区域</h3>
+<li>**格式**：地级市，单选，必须选择</li>
+<li>**数据范围**：全国地级市</li>
+<li>**示例**：`太原市`、`成都市`</li>
+<li>**模糊匹配规则**：输入"太原"→匹配"太原市"；输入"成都"→匹配"成都市"</li>
+
+<p>---</p>
+
+<h2>展示数据</h2>
+
+<p>> 示例条件：您选择了 <strong>太原市</strong> <strong>2025年12月～2026年3月</strong> 数据，按 <strong>省份通行频次</strong> 维度分析。统计基于车辆GPS轨迹数据。</p>
+
+<h3>表1：月度省份通行车辆数 — Table</h3>
+
+<tr><td>月份</td><td>通行车辆数</td><td>平均通行次数</td><td>总里程(万km)</td></tr>
+<p>|------|-----------|------------|-------------|</p>
+<tr><td>2025-12</td><td>52,340</td><td>8.5</td><td>685.6</td></tr>
+<tr><td>2026-01</td><td>51,890</td><td>8.2</td><td>652.3</td></tr>
+<tr><td>2026-02</td><td>48,560</td><td>7.8</td><td>589.5</td></tr>
+<tr><td>2026-03</td><td>56,230</td><td>9.2</td><td>756.8</td></tr>
+
+<p>> 数据口径：统计周期内，按月统计在太原市通行的车辆数、平均通行次数及总里程。</p>
+
+<p>---</p>
+
+<h3>表2：通行次数车辆数分布 — Table</h3>
+
+<tr><td>通行次数</td><td>车辆数</td><td>占比</td><td>累计占比</td></tr>
+<p>|---------|--------|------|---------|</p>
+<tr><td>1-2次</td><td>8,560</td><td>15.2%</td><td>15.2%</td></tr>
+<tr><td>3-5次</td><td>15,230</td><td>27.1%</td><td>42.3%</td></tr>
+<tr><td>6-10次</td><td>18,560</td><td>33.0%</td><td>75.3%</td></tr>
+<tr><td>11-20次</td><td>10,230</td><td>18.2%</td><td>93.5%</td></tr>
+<tr><td>20次以上</td><td>3,650</td><td>6.5%</td><td>100.0%</td></tr>
+<tr><td>**合计**</td><td>**56,230**</td><td>**100.0%**</td><td>—</td></tr>
+
+<p>> 数据口径：2026年3月在太原市通行的车辆按通行次数分段统计，占比 = 该分段车辆数 / 总通行车辆数 × 100%。</p>
+
+<p>---</p>
+
+<h3>表3：本籍/外籍车辆通行分布 — Table</h3>
+
+<tr><td>车辆归属</td><td>车辆数</td><td>占比</td><td>平均通行次数</td><td>平均里程(km)</td></tr>
+<p>|---------|--------|------|------------|------------|</p>
+<tr><td>本籍车辆（注册地为太原市）</td><td>38,560</td><td>68.6%</td><td>10.5</td><td>185</td></tr>
+<tr><td>外籍车辆（注册地非太原市）</td><td>17,670</td><td>31.4%</td><td>6.2</td><td>320</td></tr>
+<tr><td>**合计**</td><td>**56,230**</td><td>**100.0%**</td><td>—</td><td>—</td></tr>
+
+<p>> 数据口径：2026年3月在太原市通行的车辆按注册地分类统计，本籍 = 注册地为太原市，外籍 = 注册地非太原市。</p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>大卡鹰眼项目文档 | 最后更新：<span class="update-time"></span></p>
+    </div>
+    <script src="../../../assets/js/nav.js"></script>
+</body>
+</html>
