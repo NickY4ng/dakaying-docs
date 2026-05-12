@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大卡鹰眼 - 项目文档中心</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f5f5; color: #333; line-height: 1.6; }
+        .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 40px 20px; text-align: center; }
+        .header h1 { font-size: 2.5em; margin-bottom: 10px; }
+        .header p { opacity: 0.9; font-size: 1.1em; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+        .version-section { background: white; border-radius: 12px; padding: 30px; margin-bottom: 30px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .version-section h2 { color: #667eea; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid #eee; }
+        .doc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+        .doc-card { background: #f8f9fa; border-radius: 8px; padding: 20px; border-left: 4px solid #667eea; transition: transform 0.2s, box-shadow 0.2s; }
+        .doc-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+        .doc-card h3 { color: #333; margin-bottom: 8px; font-size: 1.1em; }
+        .doc-card p { color: #666; font-size: 0.9em; margin-bottom: 12px; }
+        .doc-card a { color: #667eea; text-decoration: none; font-weight: 500; }
+        .doc-card a:hover { text-decoration: underline; }
+        .tag { display: inline-block; background: #667eea; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.75em; margin-right: 6px; }
+        .tag.promotion { background: #e74c3c; }
+        .tag.plan { background: #27ae60; }
+        .tag.requirement { background: #f39c12; }
+        .footer { text-align: center; padding: 40px; color: #999; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🦅 大卡鹰眼</h1>
+        <p>项目文档中心 | 固定模板数据分析平台</p>
+    </div>
+    <div class="container">
+        <div class="version-section">
+            <h2>📦 V0.2（进行中）</h2>
+            <div class="doc-grid">
+                <div class="doc-card">
+                    <span class="tag plan">排期</span>
+                    <h3>V0.2 迭代计划</h3>
+                    <p>2026/05/12 - 2026/05/28，数据权限 + UI 优化 + 报告呈现</p>
+                    <a href="v0.2/iteration-plan.html">查看详情 →</a>
+                </div>
+                <div class="doc-card">
+                    <span class="tag promotion">促销</span>
+                    <h3>促销方案</h3>
+                    <p>5万元/2个月/全额返还/数据另算</p>
+                    <a href="v0.2/promotion-plan.html">查看详情 →</a>
+                </div>
+                <div class="doc-card">
+                    <span class="tag requirement">需求</span>
+                    <h3>数据工坊产品功能方案</h3>
+                    <p>分析模板 + 数据下载 + 权限管理</p>
+                    <a href="v0.2/data-workshop.html">查看详情 →</a>
+                </div>
+                <div class="doc-card">
+                    <span class="tag requirement">需求</span>
+                    <h3>数据权限方案</span>
+                    <p>客户数据权限与模板匹配策略</p>
+                    <a href="v0.2/data-permission.html">查看详情 →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="version-section">
+            <h2>📦 V0.1（已上线）</h2>
+            <div class="doc-grid">
+                <div class="doc-card">
+                    <span class="tag requirement">需求</span>
+                    <h3>固定模板深度分析报告</h3>
+                    <p>V0.1 需求文档，已评审</p>
+                    <a href="v0.1/requirement-doc.html">查看详情 →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>大卡鹰眼项目文档 | 最后更新：2026-05-12</p>
+    </div>
+</body>
+</html>
