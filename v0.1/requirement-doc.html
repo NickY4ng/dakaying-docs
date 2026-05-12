@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V0.1 需求文档 - 大卡鹰眼</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <div class="nav">
+        <a href="../index.html">← 首页</a>
+        <span class="nav-title">V0.1 固定模板深度分析报告需求文档</span>
+    </div>
+    <div class="container">
+        <div class="content">
+            <h1>固定模板深度分析报告 需求文档</h1>
+            <p style="color:#666;">版本：v1.0 | 日期：2026-04-29 | 编写：杨航</p>
+            
+            <h2>一、要做什么</h2>
+            <p>从多轮对话+自由输入，<strong>转向固定模板深度分析报告</strong>。</p>
+            <p>用户必选模板 → 一次性看到所有条件 → 边聊边填 → 填完出报告 → 对话结束。</p>
+            
+            <h2>二、完整流程</h2>
+            <pre>
+[用户进入] → [弹窗：必选模板，无法取消]
+    ↓
+用户选择模板
+    ↓
+系统列出所有条件（格式+数据范围+示例）
+    ↓
+用户填写（可一次填一个，可一次填多个，可填错）
+    ↓
+系统自动识别 → 提取 → 校验 → 纠正
+    ↓
+分情况处理：
+  ├─ 全部填对 → 生成报告
+  ├─ 填了一部分 → 确认已填，追问剩余
+  ├─ 部分填错 → 纠正错误，保留正确
+  └─ 回答无关 → 追问一次 → 仍无关 → 走默认值
+    ↓
+输出深度分析报告
+    ↓
+输入框禁锢，对话结束
+            </pre>
+            
+            <h2>三、前端要求</h2>
+            <ul>
+                <li>开启新会话即弹出模板选择弹窗，不可取消</li>
+                <li>报告输出后输入框强制禁锢</li>
+                <li>输入框和显示区域固定高度，内部可滚动</li>
+                <li>系统模板浮窗默认显示，支持 Markdown 预览</li>
+                <li>模板选择后去掉关闭叉号，只能重新选择/切换</li>
+                <li>新会话不继承上次模板选择，每次重新选</li>
+            </ul>
+            
+            <h2>四、待办事项</h2>
+            <table class="task-table">
+                <thead>
+                    <tr><th>待办</th><th>负责人</th><th>交付时间</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>输出基于确定性模板的需求文档</td><td>杨航</td><td>今晚</td></tr>
+                    <tr><td>梳理至少5个模板（含呈现指标和样式）</td><td>杨航</td><td>节后第一周</td></tr>
+                    <tr><td>输出测试用例</td><td>杨航</td><td>节后第一周</td></tr>
+                    <tr><td>模板对应SQL代码制定</td><td>杨晓明</td><td>节后第一周</td></tr>
+                    <tr><td>实现单模板流程走通</td><td>杨晓明</td><td>节后第一周</td></tr>
+                    <tr><td>前端适配新方案</td><td>王庆杰</td><td>节后第一周</td></tr>
+                    <tr><td>后端适配新方案</td><td>刘国文</td><td>节后第一周</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>大卡鹰眼项目文档 | 最后更新：<span class="update-time"></span></p>
+    </div>
+    <script src="../assets/js/nav.js"></script>
+</body>
+</html>

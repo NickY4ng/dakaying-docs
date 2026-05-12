@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据工坊产品功能方案 - 大卡鹰眼</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <div class="nav">
+        <a href="../index.html">← 首页</a>
+        <span class="nav-title">V0.2 数据工坊产品功能方案</span>
+    </div>
+    <div class="container">
+        <div class="content">
+            <h1>数据工坊产品功能方案</h1>
+            
+            <h2>一、产品定位</h2>
+            <p><strong>数据工坊</strong> = 原"固定模板"升级，从单一分析工具扩展为三类能力集合：</p>
+            <ul>
+                <li>分析模板</li>
+                <li>数据下载</li>
+                <li>数据解密</li>
+            </ul>
+            
+            <h2>二、能力权限设计</h2>
+            <p><strong>核心原则：</strong>不单独授权，按数据权限自动展示。</p>
+            
+            <table class="info-table">
+                <tr><th>能力</th><td>分析模板</td></tr>
+                <tr><th>绑定数据</th><td>虚拟运单数据</td></tr>
+                <tr><th>有权限时展示</th><td>跨区域/同区域货物流向分析</td></tr>
+            </table>
+            
+            <h2>三、数据下载流程</h2>
+            <p>用户进入数据工坊 → 弹窗必选能力类型 → 选择数据下载 → 选择统计类型 → 确认字段 → 填写条件 → 生成CSV</p>
+            
+            <h3>新增车辆统计</h3>
+            <p><strong>固定字段：</strong>序号、新增日期、省份、城市、区县、客户名称（加密码）、厂家、品系、车型分类、燃料种类、马力、燃料分类、驱动形式、缸数、充换电、新增入网数量</p>
+            
+            <h2>四、数据解密流程</h2>
+            <p>一次只能解密一个企业名称，输入框不禁锢，可持续交互。</p>
+            
+            <h2>五、关键决策</h2>
+            <ul>
+                <li>2026-05-06：数据工坊 = 原固定模板升级，三类能力</li>
+                <li>2026-05-06：能力权限不单独授权，按数据权限自动展示</li>
+                <li>2026-05-06：数据下载输出 CSV，交互走对话框确认流程</li>
+                <li>2026-05-06：数据解密一次只能解密一个</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>大卡鹰眼项目文档 | 最后更新：<span class="update-time"></span></p>
+    </div>
+    <script src="../assets/js/nav.js"></script>
+</body>
+</html>
