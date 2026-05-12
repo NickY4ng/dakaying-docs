@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据权限方案 - 大卡鹰眼</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <div class="nav">
+        <a href="../index.html">← 首页</a>
+        <span class="nav-title">V0.2 数据权限方案</span>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <h1>数据权限方案</h1>
+            <p style="color:#666;">客户数据权限与模板匹配策略 | 待与杨健讨论确定</p>
+
+            <h2>一、核心问题</h2>
+            <p>客户买了部分数据 → 如何判断能用哪些模板？</p>
+
+            <h2>二、三种方案</h2>
+            <table class="info-table">
+                <tr><th>方案</th><td>纯数据权限</td></tr>
+                <tr><th>说明</th><td>只判断客户有没有某类数据权限，有就展示对应模板</td></tr>
+                <tr><th>优点</th><td>简单，维护成本低</td></tr>
+                <tr><th>缺点</th><td>粒度粗，可能出现客户有数据但模板不适配的情况</td></tr>
+            </table>
+
+            <table class="info-table">
+                <tr><th>方案</th><td>数据 + 模板权限</td></tr>
+                <tr><th>说明</th><td>数据权限和模板权限分开管理，模板可以独立授权</td></tr>
+                <tr><th>优点</th><td>灵活，可以精准控制每个客户能看到哪些模板</td></tr>
+                <tr><th>缺点</th><td>复杂，运营成本高</td></tr>
+            </table>
+
+            <table class="info-table">
+                <tr><th>方案</th><td>死对应（数据↔模板一对一）</td></tr>
+                <tr><th>说明</th><td>每种数据权限绑定固定模板，买A数据就只能用A模板</td></tr>
+                <tr><th>优点</th><td>最简单，无歧义</td></tr>
+                <tr><th>缺点</th><td>不灵活，无法组合使用</td></tr>
+            </table>
+
+            <h2>三、待确认</h2>
+            <ul>
+                <li>今天下午与杨健讨论确定最终方案</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>大卡鹰眼项目文档 | 最后更新：<span class="update-time"></span></p>
+    </div>
+    <script src="../assets/js/nav.js"></script>
+</body>
+</html>
